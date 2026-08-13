@@ -65,7 +65,7 @@ nav.scrolled{background:rgba(255,255,255,.9);backdrop-filter:blur(10px);-webkit-
 .tlink{font-family:'JetBrains Mono';font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--navy);border-bottom:1px solid var(--gold);padding-bottom:5px;transition:color .3s}
 .tlink:hover{color:var(--gold-d)}
 
-/* semi-3D arc carousel — 2D transforms only (iOS-safe) */
+/* ---- arc carousel: STATIC fan layout works with ZERO JavaScript ---- */
 .arc-wrap{position:relative;aspect-ratio:1/1.02;opacity:0;animation:fadein 1.2s ease .4s forwards}
 @keyframes fadein{to{opacity:1}}
 .arc-stage{position:absolute;inset:0;touch-action:pan-y;cursor:grab}
@@ -73,11 +73,18 @@ nav.scrolled{background:rgba(255,255,255,.9);backdrop-filter:blur(10px);-webkit-
 .arc-tilt{position:absolute;inset:0;transition:transform .25s ease-out}
 .aitem{position:absolute;left:50%;top:50%;width:48%;aspect-ratio:1/1;border-radius:18px;overflow:hidden;
   background:linear-gradient(150deg,#eceef4,#d6dbe8);box-shadow:0 26px 60px rgba(15,29,58,.2);
-  will-change:transform,opacity;transform:translate(-50%,-50%)}
+  will-change:transform,opacity}
 .aitem img{width:100%;height:100%;object-fit:cover;pointer-events:none;user-select:none;-webkit-user-drag:none}
 .aitem.float{background:none;box-shadow:none;border-radius:0;overflow:visible}
 .aitem.float img{object-fit:contain;filter:drop-shadow(0 34px 34px rgba(15,29,58,.32))}
 .aitem.gone{display:none}
+/* static fan — visible even if JS never runs; JS overrides these per frame */
+.aitem:nth-child(1){transform:translate(-50%,-56%) scale(1.18);z-index:300}
+.aitem:nth-child(2){transform:translate(-108%,-46%) scale(.78);opacity:.65;z-index:200}
+.aitem:nth-child(3){transform:translate(8%,-46%) scale(.78);opacity:.65;z-index:200}
+.aitem:nth-child(4){transform:translate(-142%,-40%) scale(.55);opacity:.3;z-index:100}
+.aitem:nth-child(5){transform:translate(42%,-40%) scale(.55);opacity:.3;z-index:100}
+.aitem:nth-child(6){transform:translate(-50%,-38%) scale(.45);opacity:0;z-index:50}
 .arc-hint{position:absolute;left:50%;bottom:6px;transform:translateX(-50%);background:rgba(255,255,255,.92);color:var(--navy);border-radius:100px;padding:9px 20px;font-family:'JetBrains Mono';font-size:10px;letter-spacing:.24em;text-transform:uppercase;display:flex;align-items:center;gap:8px;box-shadow:0 10px 30px rgba(15,29,58,.14);pointer-events:none;white-space:nowrap;z-index:400}
 .arc-hint svg{width:14px;height:14px;stroke:var(--gold-d);fill:none;stroke-width:2;stroke-linecap:round}
 .arc-fallback{position:absolute;inset:0;border-radius:24px;overflow:hidden;background:linear-gradient(160deg,#eceef4,#d8dde9)}
@@ -177,7 +184,7 @@ a.c-row:hover span{color:var(--brand)}
 .qok.show{display:block;animation:qf .5s ease}
 .qok b{font-family:'Sora';font-size:20px;color:var(--navy);display:block;margin-bottom:8px}
 .qok p{color:var(--mut);font-size:14px}
-.map{margin-top:64px;border-radius:18px;overflow:hidden;border:1px solid var(--line);height:340px;background:#e9ecf3;position:relative}
+.map{margin-top:64px;border-radius:18px;overflow:hidden;border:1px solid var(--line);height:340px;background:#e9ecf3;position:relative;display:block}
 .map iframe{width:100%;height:100%;border:0}
 .map-link{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-family:'JetBrains Mono';font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--brand);border-bottom:1px solid var(--gold);padding-bottom:4px;transition:color .3s}
 .map-link:hover{color:var(--gold-d)}
@@ -238,10 +245,9 @@ footer{background:var(--ink);color:#fff;padding:60px clamp(24px,5vw,72px) 30px}
   <a href="#about">About</a><a href="#capabilities">What We Do</a><a href="#contact">Contact</a>
 </div>
 
-<!-- HERO with auto-rotating semi-3D arc carousel (iOS-safe 2D transforms)
-     Photos in repo ROOT. Each slot tries PNG → JPG → JPEG:
-       arc-1.png (background-removed → floats, no card)  OR  arc-1.jpg (card style)
-     ...up to arc-6. Missing ones are skipped. If none exist, hero.jpg shows. -->
+<!-- HERO arc carousel — photos load with plain HTML (arc-1.jpg ... arc-6.jpg in repo ROOT).
+     They are visible even with JavaScript disabled. JS adds rotation + drag on top.
+     Optional: upload arc-1.png (background removed) and it auto-upgrades to floating mode. -->
 <header class="hero" id="top">
   <div class="hero-inner">
     <div>
@@ -260,12 +266,12 @@ footer{background:var(--ink);color:#fff;padding:60px clamp(24px,5vw,72px) 30px}
     <div class="arc-wrap">
       <div class="arc-stage" id="arcStage">
         <div class="arc-tilt" id="arcTilt">
-          <div class="aitem"><img data-base="arc-1" alt="Machined aluminium flange"></div>
-          <div class="aitem"><img data-base="arc-2" alt="Machined aluminium housing"></div>
-          <div class="aitem"><img data-base="arc-3" alt="Cast aluminium bracket"></div>
-          <div class="aitem"><img data-base="arc-4" alt="Flanged aluminium component"></div>
-          <div class="aitem"><img data-base="arc-5" alt="Machined aluminium ring"></div>
-          <div class="aitem"><img data-base="arc-6" alt="Finished aluminium ring"></div>
+          <div class="aitem"><img src="arc-1.jpg" alt="Machined aluminium flange" onerror="this.closest('.aitem').classList.add('gone')"></div>
+          <div class="aitem"><img src="arc-2.jpg" alt="Machined aluminium housing" onerror="this.closest('.aitem').classList.add('gone')"></div>
+          <div class="aitem"><img src="arc-3.jpg" alt="Cast aluminium bracket" onerror="this.closest('.aitem').classList.add('gone')"></div>
+          <div class="aitem"><img src="arc-4.jpg" alt="Flanged aluminium component" onerror="this.closest('.aitem').classList.add('gone')"></div>
+          <div class="aitem"><img src="arc-5.jpg" alt="Machined aluminium ring" onerror="this.closest('.aitem').classList.add('gone')"></div>
+          <div class="aitem"><img src="arc-6.jpg" alt="Finished aluminium ring" onerror="this.closest('.aitem').classList.add('gone')"></div>
         </div>
       </div>
       <span class="arc-hint" id="arcHint"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 1 2.3 6.3M4 12V7m0 5h5"/></svg>Drag to explore</span>
@@ -428,7 +434,8 @@ footer{background:var(--ink);color:#fff;padding:60px clamp(24px,5vw,72px) 30px}
 </a>
 
 <script>
-/* zero-library build — vanilla JS, everything fires once */
+/* zero-library build — vanilla JS. Carousel photos render with plain HTML/CSS;
+   this script only adds rotation, drag and the PNG float upgrade on top. */
 
 var nav=document.getElementById('nav');
 addEventListener('scroll',function(){nav.classList.toggle('scrolled',scrollY>60);},{passive:true});
@@ -441,27 +448,19 @@ var io=new IntersectionObserver(function(es){es.forEach(function(e){
 });},{rootMargin:'0px 0px -10% 0px'});
 document.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el);});
 
-/* ---- auto-rotating semi-3D arc carousel (iOS-SAFE: 2D transforms only) ----
-   The "turning away" effect is simulated with horizontal squash (scaleX),
-   because iOS Safari hides 3D-rotated elements that have overflow:hidden.
-   Per slot: tries arc-N.png (bg-removed → floats), then .jpg, then .jpeg.
-   Missing slots are skipped. If none exist, hero.jpg shows instead. */
+/* ---- arc carousel enhancement (iOS-safe 2D transforms) ---- */
 (function(){
   var stage=document.getElementById('arcStage'),
       tilt=document.getElementById('arcTilt'),
-      hint=document.getElementById('arcHint'),
       all=[].slice.call(stage.querySelectorAll('.aitem')),
       R=0,target=0,dragging=false,sx=0,sR=0,running=false,hovering=false;
 
+  /* optional PNG upgrade: if arc-N.png exists, swap it in and float the item */
   all.forEach(function(item){
-    var img=item.querySelector('img'),base=img.dataset.base,tries=['.png','.jpg','.jpeg'],k=0;
-    img.onload=function(){if(/\.png$/i.test(img.src))item.classList.add('float');};
-    img.onerror=function(){
-      k++;
-      if(k<tries.length){img.src=base+tries[k];}
-      else{item.classList.add('gone');}
-    };
-    img.src=base+tries[0];
+    var img=item.querySelector('img'),base=img.getAttribute('src').replace(/\.jpg$/i,'');
+    var probe=new Image();
+    probe.onload=function(){img.src=base+'.png';item.classList.add('float');};
+    probe.src=base+'.png';
   });
 
   function live(){return all.filter(function(el){return !el.classList.contains('gone');});}
@@ -471,7 +470,7 @@ document.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el);}
   function render(t){
     if(!running)return;
     var items=live(),n=items.length;
-    if(n===0){fallback();return;}
+    if(n===0){running=false;return;}
     var dt=Math.min(t-lastT,50);lastT=t;
     if(!dragging){target+=(hovering?.06:.22)*(dt/16.7);}
     R+=(target-R)*.1;
@@ -480,20 +479,13 @@ document.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el);}
       var a=norm(i*(360/n)+R), rad=a*Math.PI/180,
           c=Math.cos(rad), s=Math.sin(rad), cp=Math.max(c,0), ac=Math.abs(c),
           vis=Math.abs(a)<=72,
-          size=.45+.85*cp,          /* center grows to ~1.3x */
-          squash=.32+.68*ac;        /* edges squish = "turned away" */
+          size=.45+.85*cp,
+          squash=.32+.68*ac;
       el.style.opacity=vis?(.18+.82*cp*cp):0;
       el.style.zIndex=Math.round(c*100)+100;
       el.style.transform='translate(-50%,-50%) translate3d('+(s*W*.44)+'px,'+((1-c)*H*.2-cp*H*.06)+'px,0) scale('+(size*squash)+','+size+')';
-      el.style.pointerEvents=vis?'auto':'none';
     });
     requestAnimationFrame(render);
-  }
-
-  function fallback(){
-    running=false;
-    stage.innerHTML='<div class="arc-fallback"><img src="hero.jpg" alt="Molten aluminium being poured" onerror="this.onerror=null;this.src=\'https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/f78e6b4c-5801-5f4f-82e9-9151d1bb26f8/64d1bcf8-1e38-508b-afbf-1aa2f98d76c0.jpg\'"></div>';
-    hint.style.display='none';
   }
 
   stage.addEventListener('pointerdown',function(e){
@@ -518,8 +510,6 @@ document.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el);}
     if(en[0].isIntersecting&&!running){running=true;lastT=performance.now();requestAnimationFrame(render);}
     else if(!en[0].isIntersecting){running=false;}
   },{threshold:0}).observe(stage);
-
-  setTimeout(function(){if(live().length===0)fallback();},5000);
 })();
 
 /* 3-question form */
