@@ -75,7 +75,6 @@ nav.scrolled{background:rgba(255,255,255,.9);backdrop-filter:blur(10px);-webkit-
   background:linear-gradient(150deg,#eceef4,#d6dbe8);box-shadow:0 26px 60px rgba(15,29,58,.2);
   will-change:transform,opacity;transform:translate(-50%,-50%)}
 .aitem img{width:100%;height:100%;object-fit:cover;pointer-events:none;user-select:none;-webkit-user-drag:none}
-/* floating mode — automatic when you upload background-removed PNGs */
 .aitem.float{background:none;box-shadow:none;border-radius:0;overflow:visible}
 .aitem.float img{object-fit:contain;filter:drop-shadow(0 34px 34px rgba(15,29,58,.32))}
 .aitem.gone{display:none}
@@ -83,7 +82,16 @@ nav.scrolled{background:rgba(255,255,255,.9);backdrop-filter:blur(10px);-webkit-
 .arc-hint svg{width:14px;height:14px;stroke:var(--gold-d);fill:none;stroke-width:2;stroke-linecap:round}
 .arc-fallback{position:absolute;inset:0;border-radius:24px;overflow:hidden;background:linear-gradient(160deg,#eceef4,#d8dde9)}
 .arc-fallback img{width:100%;height:100%;object-fit:cover}
-@media(max-width:960px){.hero-inner{grid-template-columns:1fr}.arc-wrap{max-width:460px;margin:0 auto}}
+@media(max-width:960px){
+  .hero{padding:120px clamp(20px,6vw,72px) 70px}
+  .hero-inner{grid-template-columns:1fr}
+  .arc-wrap{max-width:none;margin:20px auto 0}
+  .aitem{width:62%}
+}
+@media(max-width:480px){
+  .hero h1{font-size:clamp(38px,11.5vw,52px)}
+  .hero-btns{gap:20px}
+}
 
 /* sections */
 section{padding:clamp(100px,12vw,170px) clamp(24px,5vw,72px)}
@@ -169,7 +177,7 @@ a.c-row:hover span{color:var(--brand)}
 .qok.show{display:block;animation:qf .5s ease}
 .qok b{font-family:'Sora';font-size:20px;color:var(--navy);display:block;margin-bottom:8px}
 .qok p{color:var(--mut);font-size:14px}
-.map{margin-top:64px;border-radius:18px;overflow:hidden;border:1px solid var(--line);height:340px;background:#e9ecf3}
+.map{margin-top:64px;border-radius:18px;overflow:hidden;border:1px solid var(--line);height:340px;background:#e9ecf3;position:relative}
 .map iframe{width:100%;height:100%;border:0}
 .map-link{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-family:'JetBrains Mono';font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--brand);border-bottom:1px solid var(--gold);padding-bottom:4px;transition:color .3s}
 .map-link:hover{color:var(--gold-d)}
@@ -380,11 +388,13 @@ footer{background:var(--ink);color:#fff;padding:60px clamp(24px,5vw,72px) 30px}
         </div>
       </form>
     </div>
-    <div class="map" data-reveal>
-      <iframe title="Zaitun Engineers location — GIDC Vapi" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-        src="https://maps.google.com/maps?q=Zaitun%20Engineers%2C%20GIDC%20Industrial%20Estate%2C%20Vapi%2C%20Gujarat&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
-    </div>
-    <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=Zaitun+Engineers,+GIDC+Industrial+Estate,+Vapi,+Gujarat+396195" target="_blank" rel="noopener" data-reveal>Open directions in Google Maps ↗</a>
+    <!-- Map: whole frame is one link — tapping anywhere opens Zaitun Engineers in Google Maps (new tab) -->
+    <a class="map" data-reveal target="_blank" rel="noopener" aria-label="Open Zaitun Engineers in Google Maps"
+       href="https://www.google.com/maps/search/?api=1&query=Zaitun+Engineers+GIDC+Vapi+Gujarat">
+      <iframe title="Zaitun Engineers location — GIDC Vapi" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="pointer-events:none"
+        src="https://maps.google.com/maps?q=Zaitun%20Engineers%2C%20GIDC%2C%20Vapi&t=&z=16&ie=UTF8&iwloc=&output=embed"></iframe>
+    </a>
+    <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=Zaitun+Engineers,+GIDC+Industrial+Estate,+Vapi,+Gujarat+396195" target="_blank" rel="noopener" data-reveal>Get directions to Zaitun Engineers ↗</a>
   </div>
 </section>
 
@@ -431,9 +441,7 @@ var io=new IntersectionObserver(function(es){es.forEach(function(e){
 });},{rootMargin:'0px 0px -10% 0px'});
 document.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el);});
 
-/* ---- auto-rotating semi-3D arc carousel ----
-   Per slot: tries arc-N.png (background-removed → floats), then arc-N.jpg (card).
-   Missing slots are skipped. If none exist, hero.jpg shows instead. */
+/* ---- auto-rotating semi-3D arc carousel ---- */
 (function(){
   var stage=document.getElementById('arcStage'),
       tilt=document.getElementById('arcTilt'),
@@ -460,7 +468,7 @@ document.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el);}
     var items=live(),n=items.length;
     if(n===0){fallback();return;}
     var dt=Math.min(t-lastT,50);lastT=t;
-    if(!dragging){target+=(hovering?.06:.22)*(dt/16.7);}   /* always rotating; slower on hover */
+    if(!dragging){target+=(hovering?.06:.22)*(dt/16.7);}
     R+=(target-R)*.1;
     var W=stage.offsetWidth,H=stage.offsetHeight;
     items.forEach(function(el,i){
