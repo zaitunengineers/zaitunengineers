@@ -1,0 +1,11 @@
+#!/bin/bash
+cd "$(dirname "$0")"
+echo "Downloading images..."
+curl -L -s -o "images/hero.jpg" "https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/f78e6b4c-5801-5f4f-82e9-9151d1bb26f8/64d1bcf8-1e38-508b-afbf-1aa2f98d76c0.jpg"
+curl -L -s -o "images/about.jpg" "https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/36aa5cb2-c4f1-5ac2-ac61-443e4dec98dc/831722a9-0ddd-5805-88c5-4097e318d37a.jpg"
+curl -L -s -o "images/casting-shop.jpg" "https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/7b691298-cfae-5856-9cf9-b36abc9f3e89/9ab95dcd-654f-5fe6-9630-ef5d436582ca.jpg"
+curl -L -s -o "images/vmc-machining.jpg" "https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/ee60bee7-d6c6-5f52-980f-76f7a711f448/d04df9be-0464-5cc4-9d83-b896cacf70fa.jpg"
+curl -L -s -o "images/moulding.jpg" "https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/45f83693-3e73-5b34-958a-c91fdfa39a8b/9a2e58af-e219-58b1-ad4f-b526d23dfc1d.jpg"
+curl -L -s -o "images/melting.jpg" "https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/02637a62-3737-5022-afcf-8e9e7c419214/62ed12ac-27c5-504b-8fa4-95f41e163466.jpg"
+curl -L -s -o "images/components.jpg" "https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/8971782c-37a3-5b5b-a489-92df56e90c5f/9a2e58af-e219-58b1-ad4f-b526d23dfc1d.jpg"
+echo "Done!"

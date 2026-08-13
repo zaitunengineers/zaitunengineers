@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zaitun Engineers — Aluminium Casting & Precision Machining | GIDC Vapi</title>
+<meta name="description" content="Zaitun Engineers, GIDC Vapi — Aluminium sand casting, gravity die casting and precision VMC machining under one roof. Call +91 98249 09008.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='none' stroke='%2322387a' stroke-width='4'/%3E%3Cpath d='M14 19h20v4.5L24.5 40.5H34V45H14v-4.5l9.5-17H14z' fill='%2322387a'/%3E%3Cpath d='M34 24h14v4.5H38.5V32h8v4h-8v5.5H48V46H34z' fill='%2322387a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brand:#22387a;
+  --navy:#0f1d3a;
+  --navy2:#16294f;
+  --ink:#0a1428;
+  --gold:#c8a24b;
+  --gold-d:#a8853a;
+  --white:#ffffff;
+  --offw:#f6f7fb;
+  --mut:#5b6a86;
+  --steel:#8fa0b8;
+  --line:rgba(15,29,58,.12);
+  --linew:rgba(255,255,255,.1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{background:var(--white);color:var(--navy);font-family:'Inter',sans-serif;font-weight:300;line-height:1.65;overflow-x:hidden}
+::selection{background:var(--brand);color:#fff}
+h1,h2,h3,h4{font-family:'Sora',sans-serif}
+.serif{font-family:'Fraunces',serif;font-style:italic;font-weight:400}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+/* cursor — desktop only */
+.cursor{position:fixed;top:0;left:0;width:8px;height:8px;border-radius:50%;background:var(--brand);pointer-events:none;z-index:9999;display:none}
+.cursor-ring{position:fixed;top:0;left:0;width:34px;height:34px;border-radius:50%;border:1px solid rgba(34,56,122,.4);pointer-events:none;z-index:9998;transition:width .3s,height .3s,border-color .3s;display:none}
+.cursor-ring.hovering{width:62px;height:62px;border-color:var(--gold)}
+@media(hover:hover) and (pointer:fine){
+  body,a,button{cursor:none}
+  .cursor,.cursor-ring{display:block}
+}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:900;display:flex;align-items:center;justify-content:space-between;padding:20px clamp(20px,4vw,60px);transition:background .4s,padding .4s,border-color .4s,box-shadow .4s;border-bottom:1px solid transparent}
+nav.scrolled{background:rgba(255,255,255,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:12px clamp(20px,4vw,60px);border-color:var(--line);box-shadow:0 6px 30px rgba(15,29,58,.06)}
+.brand{display:flex;align-items:center;gap:13px}
+.brand .mark{width:42px;height:42px;flex:0 0 42px}
+.brand .mark svg{width:42px;height:42px}
+.brand .bt{font-family:'Sora';font-weight:800;font-size:16px;letter-spacing:.26em;line-height:1;color:var(--navy)}
+.brand .bt small{display:block;font-weight:400;font-size:8.5px;letter-spacing:.6em;color:var(--gold-d);margin-top:5px}
+.nav-links{display:flex;gap:34px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.nav-links a{position:relative;padding:4px 0;transition:color .3s}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .4s cubic-bezier(.7,0,.3,1)}
+.nav-links a:hover{color:var(--navy)}
+.nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
+.nav-cta{border:1px solid var(--brand);padding:11px 26px;border-radius:100px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--brand);transition:.35s}
+.nav-cta:hover{background:var(--brand);color:#fff}
+.burger{display:none;flex-direction:column;gap:6px;background:none;border:0;cursor:pointer}
+.burger span{width:26px;height:1.5px;background:var(--navy)}
+@media(max-width:920px){.nav-links,.nav-cta{display:none}.burger{display:flex}}
+
+/* hero — white */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:120px clamp(20px,4vw,60px) 0;overflow:hidden;
+  background:radial-gradient(900px 520px at 82% 12%,rgba(34,56,122,.07),transparent 62%),var(--white)}
+.hero-watermark{position:absolute;top:48%;left:50%;transform:translate(-50%,-50%);font-family:'Sora';font-weight:800;font-size:clamp(120px,26vw,360px);letter-spacing:.05em;color:transparent;-webkit-text-stroke:1px rgba(34,56,122,.06);z-index:0;white-space:nowrap;pointer-events:none;text-transform:uppercase}
+.hero-inner{position:relative;z-index:2;max-width:1440px;width:100%;margin:0 auto;display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(30px,5vw,70px);align-items:center}
+.hero-kicker{display:flex;align-items:center;gap:14px;color:var(--gold-d);font-family:'JetBrains Mono';font-size:11px;letter-spacing:.32em;text-transform:uppercase;margin-bottom:28px}
+.hero-kicker::before{content:"";width:46px;height:1px;background:var(--gold)}
+.hero h1{font-size:clamp(42px,6.6vw,96px);font-weight:800;line-height:1.03;letter-spacing:-.015em;text-transform:uppercase;color:var(--navy)}
+.hero h1 .row{overflow:hidden;display:block;padding-bottom:.06em}
+.hero h1 .row>span{display:inline-block;transform:translateY(112%)}
+.hero h1 .serif{text-transform:none;font-size:1.05em;color:var(--gold-d)}
+.hero-sub{margin-top:28px;max-width:520px;color:var(--mut);font-size:16px}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;margin-top:34px}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 32px;border-radius:100px;font-family:'Sora';font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;transition:transform .35s,box-shadow .35s,background .35s,color .35s,border-color .35s;border:1px solid transparent}
+.btn.solid{background:var(--brand);color:#fff}
+.btn.solid:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(34,56,122,.3)}
+.btn.ghost{border-color:rgba(15,29,58,.25);color:var(--navy)}
+.btn.ghost:hover{border-color:var(--gold-d);color:var(--gold-d)}
+.btn.white{background:#fff;color:var(--brand)}
+.btn.white:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(0,0,0,.3)}
+.hero-media{position:relative}
+.hero-media .frame{position:relative;border-radius:200px 200px 18px 18px;overflow:hidden;aspect-ratio:3.4/4.2;background:linear-gradient(160deg,#e6e9f2,#cdd3e4);clip-path:inset(100% 0 0 0);box-shadow:0 40px 90px rgba(15,29,58,.16)}
+.hero-media img{width:100%;height:100%;object-fit:cover}
+.rotor{position:absolute;top:-36px;right:-28px;width:126px;height:126px;z-index:3}
+.rotor>svg{width:100%;height:100%;animation:spin 16s linear infinite}
+.rotor text{font-family:'JetBrains Mono';font-size:9.4px;letter-spacing:.3em;fill:var(--gold-d);text-transform:uppercase}
+.rotor .core{position:absolute;inset:0;display:grid;place-items:center}
+.rotor .core .disc{width:48px;height:48px;border-radius:50%;background:var(--brand);display:grid;place-items:center;box-shadow:0 10px 30px rgba(34,56,122,.35)}
+.rotor .core svg{width:32px;height:32px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero-stats{position:relative;z-index:2;max-width:1440px;width:100%;margin:64px auto 0;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.hstat{padding:26px 14px 32px;border-right:1px solid var(--line)}
+.hstat:last-child{border-right:0}
+.hstat b{font-family:'Sora';font-size:clamp(26px,3vw,40px);font-weight:700;display:block;color:var(--navy)}
+.hstat b em{font-style:normal;color:var(--gold-d)}
+.hstat span{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--mut)}
+@media(max-width:1000px){.hero-inner{grid-template-columns:1fr}.hero-media{max-width:420px}.rotor{right:-6px}}
+@media(max-width:760px){.hero-stats{grid-template-columns:repeat(2,1fr)}.hstat:nth-child(2){border-right:0}}
+
+/* marquee — navy strip */
+.marquee{background:var(--brand);overflow:hidden;padding:18px 0;white-space:nowrap}
+.marquee .track{display:inline-flex;animation:mq 30s linear infinite}
+.marquee span{font-family:'Sora';font-weight:600;font-size:clamp(14px,1.7vw,19px);letter-spacing:.16em;text-transform:uppercase;padding:0 30px;color:rgba(255,255,255,.85)}
+.marquee span i{font-style:normal;color:var(--gold);padding-right:60px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* sections */
+section{padding:clamp(84px,10vw,140px) clamp(20px,4vw,60px);position:relative}
+.wrap{max-width:1440px;margin:0 auto}
+.tag{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-d);display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.tag::before{content:"";width:36px;height:1px;background:var(--gold)}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:clamp(40px,6vw,80px)}
+.sec-head h2{font-size:clamp(32px,4.6vw,60px);font-weight:800;line-height:1.07;letter-spacing:-.015em;text-transform:uppercase;color:var(--navy)}
+.sec-head h2 .serif{text-transform:none;font-size:1.04em;color:var(--gold-d)}
+.sec-head p{max-width:400px;color:var(--mut);font-size:15px}
+[data-reveal]{opacity:0;transform:translateY(40px)}
+
+/* about */
+#about{background:var(--offw)}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(44px,6vw,100px);align-items:start}
+.about-media{position:relative;order:2}
+.about-media .frame{border-radius:18px;overflow:hidden;aspect-ratio:4/4.6;background:linear-gradient(150deg,#e3e6ee,#c9cedd);box-shadow:0 30px 70px rgba(15,29,58,.12)}
+.about-media img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.about-media:hover img{transform:scale(1.02)}
+.about-media .est{position:absolute;right:-18px;top:36px;background:var(--brand);color:#fff;border-radius:14px;padding:22px 28px;box-shadow:0 24px 60px rgba(34,56,122,.35)}
+.about-media .est b{font-family:'Sora';font-size:32px;font-weight:800;display:block;line-height:1}
+.about-media .est span{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.65)}
+.about-copy h2{font-size:clamp(30px,3.8vw,48px);font-weight:800;line-height:1.1;text-transform:uppercase;margin-bottom:26px;color:var(--navy)}
+.about-copy h2 .serif{text-transform:none;color:var(--gold-d)}
+.about-copy p{color:var(--mut);margin-bottom:18px;font-size:16px}
+.about-copy p b{color:var(--navy);font-weight:500}
+.about-list{margin-top:28px;counter-reset:li}
+.about-list li{list-style:none;display:flex;gap:18px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--line);font-size:15px;color:#2a3852}
+.about-list li::before{content:"0" counter(li);counter-increment:li;font-family:'JetBrains Mono';font-size:11px;color:var(--gold-d)}
+@media(max-width:920px){.about-grid{grid-template-columns:1fr}.about-media{order:0}.about-media .est{right:14px}}
+
+/* capabilities — rows + fixed right preview */
+#capabilities{background:var(--white)}
+.cap-wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(30px,5vw,70px);align-items:start}
+.cap-list{border-top:1px solid var(--line)}
+.cap-row{position:relative;display:grid;grid-template-columns:70px 1fr auto;align-items:center;gap:clamp(14px,2.4vw,30px);padding:clamp(22px,2.8vw,34px) 8px;border-bottom:1px solid var(--line);transition:background .35s,padding .35s;cursor:pointer}
+.cap-row:hover,.cap-row.active{background:var(--offw);padding-left:clamp(14px,2vw,26px)}
+.cap-row .num{font-family:'JetBrains Mono';font-size:12px;color:var(--gold-d);letter-spacing:.2em}
+.cap-row h3{font-size:clamp(19px,2.2vw,30px);font-weight:700;text-transform:uppercase;letter-spacing:.01em;color:var(--navy);transition:color .3s}
+.cap-row:hover h3,.cap-row.active h3{color:var(--brand)}
+.cap-row p{grid-column:2;color:var(--mut);font-size:13.5px;max-width:520px;margin-top:5px}
+.cap-row .arr{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:.35s;grid-row:span 2}
+.cap-row:hover .arr,.cap-row.active .arr{background:var(--brand);border-color:var(--brand);transform:rotate(45deg)}
+.cap-row .arr svg{width:17px;height:17px;stroke:var(--navy);fill:none;stroke-width:1.8;stroke-linecap:round;transition:.35s}
+.cap-row:hover .arr svg,.cap-row.active .arr svg{stroke:#fff}
+.cap-visual{position:sticky;top:110px}
+.cap-visual .panel{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:4/3.3;background:linear-gradient(150deg,#e6e9f2,#cdd3e4);box-shadow:0 34px 80px rgba(15,29,58,.16)}
+.cap-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s ease}
+.cap-visual img.show{opacity:1}
+.cap-visual .plabel{position:absolute;left:16px;bottom:16px;z-index:2;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);color:var(--navy);border-radius:100px;padding:9px 20px;font-family:'Sora';font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.cap-visual .plabel i{font-style:normal;color:var(--gold-d);margin-right:8px}
+@media(max-width:920px){.cap-wrap{grid-template-columns:1fr}.cap-visual{display:none}.cap-row{grid-template-columns:50px 1fr}.cap-row .arr{display:none}.cap-row p{grid-column:2}}
+
+/* process — navy */
+#process{background:var(--navy)}
+#process .sec-head h2{color:#fff}
+#process .sec-head h2 .serif{color:var(--gold)}
+#process .sec-head p{color:var(--steel)}
+#process .tag{color:var(--gold)}
+.proc{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--linew);border:1px solid var(--linew);border-radius:20px;overflow:hidden}
+.step{background:var(--navy);padding:clamp(28px,3.2vw,44px);min-height:220px;display:flex;flex-direction:column;justify-content:space-between;transition:background .35s}
+.step:hover{background:var(--navy2)}
+.step .sn{font-family:'Fraunces',serif;font-style:italic;font-size:50px;color:rgba(255,255,255,.16);line-height:1;transition:color .35s}
+.step:hover .sn{color:var(--gold)}
+.step h4{font-size:17px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin:20px 0 8px;color:#fff}
+.step p{font-size:13.5px;color:var(--steel)}
+@media(max-width:900px){.proc{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.proc{grid-template-columns:1fr}.step{min-height:0}}
+
+/* facility — white */
+#work{background:var(--white)}
+.gal{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+.gitem{position:relative;border-radius:16px;overflow:hidden;background:linear-gradient(150deg,#e6e9f2,#cdd3e4)}
+.gitem img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.8,.2,1)}
+.gitem:hover img{transform:scale(1.05)}
+.gitem .cap{position:absolute;left:14px;bottom:14px;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);color:var(--navy);border-radius:100px;padding:9px 20px;font-family:'Sora';font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.gitem .cap i{font-style:normal;color:var(--gold-d);margin-right:8px}
+.g1{grid-column:span 7;aspect-ratio:16/10.4}
+.g2{grid-column:span 5;aspect-ratio:4/3.42}
+.g3,.g4,.g5{grid-column:span 4;aspect-ratio:1/1.02}
+@media(max-width:820px){.g1,.g2,.g3,.g4,.g5{grid-column:span 12;aspect-ratio:16/10}}
+
+/* industries */
+#industries{background:var(--offw)}
+.ind{display:flex;flex-wrap:wrap;gap:14px}
+.chip{border:1px solid var(--line);border-radius:100px;padding:15px 30px;font-family:'Sora';font-size:13.5px;font-weight:500;letter-spacing:.06em;color:var(--mut);transition:.3s;background:#fff}
+.chip:hover{background:var(--brand);border-color:var(--brand);color:#fff;transform:translateY(-3px)}
+
+/* CTA — navy */
+#cta{background:var(--brand);color:#fff;text-align:center;padding:clamp(80px,10vw,130px) clamp(20px,4vw,60px)}
+#cta h2{font-size:clamp(34px,5.4vw,70px);font-weight:800;text-transform:uppercase;line-height:1.06}
+#cta h2 .serif{text-transform:none;color:var(--gold)}
+#cta p{margin:22px auto 36px;max-width:520px;font-size:16px;color:rgba(255,255,255,.75)}
+
+/* contact — white */
+#contact{background:var(--white)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(44px,6vw,90px)}
+.c-row{display:flex;gap:18px;padding:20px 0;border-bottom:1px solid var(--line);align-items:flex-start;transition:.3s}
+a.c-row:hover{padding-left:8px}
+a.c-row:hover span{color:var(--brand)}
+.c-row .ic{width:46px;height:46px;flex:0 0 46px;border-radius:12px;border:1px solid rgba(34,56,122,.25);display:grid;place-items:center}
+.c-row .ic svg{width:20px;height:20px;stroke:var(--brand);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.c-row .ic svg.fillit{fill:var(--brand);stroke:none}
+.c-row b{display:block;font-family:'Sora';font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--mut);margin-bottom:5px;font-weight:500}
+.c-row span{font-size:15px;color:var(--navy);transition:color .3s;word-break:break-word}
+form{display:grid;gap:16px}
+.fld{position:relative}
+.fld input,.fld textarea,.fld select{width:100%;background:var(--offw);border:1px solid var(--line);border-radius:12px;padding:19px 20px;color:var(--navy);font-family:'Inter';font-size:15px;outline:none;transition:border-color .3s,box-shadow .3s;resize:vertical}
+.fld input::placeholder,.fld textarea::placeholder{color:#9aa5bb}
+.fld input:focus,.fld textarea:focus,.fld select:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,162,75,.15);background:#fff}
+.fld label{position:absolute;top:-8px;left:16px;background:#fff;padding:0 8px;font-family:'JetBrains Mono';font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-d)}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:920px){.contact-grid{grid-template-columns:1fr}.f2{grid-template-columns:1fr}}
+.map{margin-top:60px;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 60px rgba(15,29,58,.1);height:360px;background:var(--offw)}
+.map iframe{width:100%;height:100%;border:0}
+
+/* footer — navy */
+footer{background:var(--ink);color:#fff;padding:64px clamp(20px,4vw,60px) 32px}
+.foot{max-width:1440px;margin:0 auto}
+.foot-top{display:flex;flex-wrap:wrap;gap:36px;justify-content:space-between;align-items:flex-start;padding-bottom:44px;border-bottom:1px solid var(--linew)}
+.foot-brand{display:flex;align-items:center;gap:15px}
+.foot-brand .mark{width:52px;height:52px;border-radius:50%;background:#fff;display:grid;place-items:center}
+.foot-brand .mark svg{width:44px;height:44px}
+.foot-brand .bt{font-family:'Sora';font-weight:800;font-size:19px;letter-spacing:.26em;line-height:1}
+.foot-brand .bt small{display:block;font-weight:400;font-size:9.5px;letter-spacing:.6em;color:var(--gold);margin-top:6px}
+.foot-links{display:flex;gap:clamp(24px,4vw,60px);flex-wrap:wrap}
+.foot-links div{display:grid;gap:10px;font-size:13px;color:var(--steel);align-content:start}
+.foot-links b{font-family:'JetBrains Mono';font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;font-weight:500}
+.foot-links a:hover{color:#fff}
+.foot-base{display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between;padding-top:28px}
+.foot-base small{color:var(--steel);font-size:12px;letter-spacing:.08em}
+.socials{display:flex;gap:12px}
+.socials a{width:44px;height:44px;border-radius:50%;border:1px solid var(--linew);display:grid;place-items:center;transition:.3s}
+.socials a:hover{border-color:#fff;transform:translateY(-3px)}
+.socials svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.socials svg.fillit{fill:#fff;stroke:none}
+.to-top{width:52px;height:52px;border-radius:50%;border:1px solid var(--linew);display:grid;place-items:center;transition:.3s}
+.to-top:hover{border-color:#fff;transform:translateY(-4px)}
+.to-top svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round}
+
+/* mobile menu */
+.mmenu{position:fixed;inset:0;background:rgba(255,255,255,.98);z-index:950;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;opacity:0;pointer-events:none;transition:opacity .35s}
+.mmenu.open{opacity:1;pointer-events:auto}
+.mmenu a{font-family:'Sora';font-size:clamp(28px,7vw,44px);font-weight:700;text-transform:uppercase;padding:8px;color:var(--navy)}
+.mmenu a:hover{color:var(--gold-d)}
+.mmenu .close{position:absolute;top:26px;right:26px;background:none;border:1px solid var(--line);color:var(--navy);width:48px;height:48px;border-radius:50%;font-size:16px;cursor:pointer}
+
+/* floating whatsapp */
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:850;width:56px;height:56px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 12px 34px rgba(15,29,58,.28);transition:transform .3s}
+.wa-float:hover{transform:translateY(-4px) scale(1.05)}
+.wa-float svg{width:28px;height:28px;fill:#fff}
+</style>
+</head>
+<body>
+
+<div class="cursor"></div><div class="cursor-ring"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#top" class="brand" data-hover>
+    <span class="mark"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="28.5" fill="none" stroke="#22387a" stroke-width="2.6"/><g fill="#22387a" transform="translate(4.5,0) skewX(-11)"><path d="M14 19h20v4.6L24.4 40.4H34V45H14v-4.6l9.6-16.8H14z"/><path d="M34.5 24h13.5v4.4H39v3.6h7.6v4H39v5.6h9V46H34.5z"/></g></svg></span>
+    <span class="bt">ZAITUN<small>ENGINEERS</small></span>
+  </a>
+  <div class="nav-links">
+    <a href="#about" data-hover>About</a>
+    <a href="#capabilities" data-hover>Capabilities</a>
+    <a href="#process" data-hover>Process</a>
+    <a href="#work" data-hover>Facility</a>
+    <a href="#contact" data-hover>Contact</a>
+  </div>
+  <a href="#contact" class="nav-cta" data-hover>Get a Quote</a>
+  <button class="burger" id="burger" aria-label="menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mmenu" id="mmenu">
+  <button class="close" id="mclose">✕</button>
+  <a href="#about">About</a><a href="#capabilities">Capabilities</a><a href="#process">Process</a>
+  <a href="#work">Facility</a><a href="#contact">Contact</a>
+</div>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="hero-watermark">ZAITUN</div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-kicker">GIDC · Vapi · Gujarat · India</div>
+      <h1>
+        <span class="row"><span>Cast in <em class="serif">fire,</em></span></span>
+        <span class="row"><span>machined to</span></span>
+        <span class="row"><span><em class="serif">perfection.</em></span></span>
+      </h1>
+      <p class="hero-sub" data-reveal>Zaitun Engineers is an aluminium casting and precision machining house — from sand and gravity die castings to finished VMC-machined components, delivered under one roof.</p>
+      <div class="hero-btns" data-reveal>
+        <a href="#contact" class="btn solid magnetic" data-hover>Request a Quote ↗</a>
+        <a href="#capabilities" class="btn ghost magnetic" data-hover>Explore Capabilities</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <div class="rotor">
+        <svg viewBox="0 0 132 132"><defs><path id="circ" d="M66 14a52 52 0 1 1 0 104 52 52 0 1 1 0-104"/></defs>
+          <text><textPath href="#circ">ALUMINIUM CASTING · PRECISION MACHINING · VAPI ·</textPath></text>
+        </svg>
+        <div class="core"><span class="disc"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="28.5" fill="none" stroke="#ffffff" stroke-width="3"/><g fill="#ffffff" transform="translate(4.5,0) skewX(-11)"><path d="M14 19h20v4.6L24.4 40.4H34V45H14v-4.6l9.6-16.8H14z"/><path d="M34.5 24h13.5v4.4H39v3.6h7.6v4H39v5.6h9V46H34.5z"/></g></svg></span></div>
+      </div>
+      <div class="frame" id="heroFrame"><img fetchpriority="high" src="images/hero.jpg" onerror="this.onerror=null;this.src='https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/f78e6b4c-5801-5f4f-82e9-9151d1bb26f8/64d1bcf8-1e38-508b-afbf-1aa2f98d76c0.jpg'" alt="Molten aluminium being poured at a foundry"></div>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="hstat" data-reveal><b><em data-count="25">0</em>+</b><span>Years of Foundry Work</span></div>
+    <div class="hstat" data-reveal><b><em data-count="120">0</em>+</b><span>Tonnes Poured / Year</span></div>
+    <div class="hstat" data-reveal><b><em data-count="500">0</em>K+</b><span>Components Delivered</span></div>
+    <div class="hstat" data-reveal><b><em data-count="98">0</em>%</b><span>On-Time Dispatch</span></div>
+  </div>
+</header>
+
+<!-- MARQUEE -->
+<div class="marquee"><div class="track" id="mq">
+  <span>Aluminium Sand Casting<i>✦</i></span><span>Gravity Die Casting<i>✦</i></span><span>VMC / CNC Machining<i>✦</i></span><span>Pattern &amp; Tool Making<i>✦</i></span><span>Heat Treatment<i>✦</i></span><span>Finishing &amp; Assembly<i>✦</i></span>
+</div></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-copy">
+      <div class="tag" data-reveal>Who We Are</div>
+      <h2 data-reveal>A foundry built on <span class="serif">molten discipline</span></h2>
+      <p data-reveal>Located in the industrial heart of <b>GIDC, Vapi</b>, Zaitun Engineers specialises in the <b>machining of aluminium sand castings</b> and gravity die cast components. What started as a small foundry floor is today a complete cast-to-finish operation serving OEMs across Gujarat and India.</p>
+      <p data-reveal>Patterns and core boxes are machined from a <b>single reference on VMC</b> to minimise casting shift — so every component comes out closer to net shape, with less machining allowance and tighter tolerances.</p>
+      <ul class="about-list">
+        <li data-reveal>Single-reference VMC-machined patterns &amp; core boxes</li>
+        <li data-reveal>In-house melting, moulding, casting &amp; machining</li>
+        <li data-reveal>Lot-wise dimensional inspection &amp; material traceability</li>
+        <li data-reveal>Supply across Gujarat and pan-India</li>
+      </ul>
+    </div>
+    <div class="about-media" data-reveal>
+      <div class="frame"><img loading="lazy" decoding="async" src="images/about.jpg" onerror="this.onerror=null;this.src='https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/36aa5cb2-c4f1-5ac2-ac61-443e4dec98dc/831722a9-0ddd-5805-88c5-4097e318d37a.jpg'" alt="Aluminium sand casting mould"></div>
+      <div class="est"><b>25+</b><span>Years of Casting</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section id="capabilities">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="tag" data-reveal>What We Do</div><h2 data-reveal>Cast. Machine.<br><span class="serif">deliver.</span></h2></div>
+      <p data-reveal>Six core capabilities, one accountable supplier. Send us a drawing — we return a finished, inspected component.</p>
+    </div>
+    <div class="cap-wrap">
+      <div class="cap-list">
+        <div class="cap-row active" data-local="images/moulding.jpg" data-remote="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/45f83693-3e73-5b34-958a-c91fdfa39a8b/9a2e58af-e219-58b1-ad4f-b526d23dfc1d.jpg" data-label="Aluminium Sand Casting" data-reveal>
+          <span class="num">/ 01</span><h3>Aluminium Sand Casting</h3><span class="arr"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+          <p>Green sand and CO₂ moulding for intricate aluminium castings — from a few hundred grams to large housings.</p>
+        </div>
+        <div class="cap-row" data-local="images/casting-shop.jpg" data-remote="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/7b691298-cfae-5856-9cf9-b36abc9f3e89/9ab95dcd-654f-5fe6-9630-ef5d436582ca.jpg" data-label="Gravity Die Casting" data-reveal>
+          <span class="num">/ 02</span><h3>Gravity Die Casting</h3><span class="arr"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+          <p>Permanent-mould GDC for denser, pressure-tight components with superior finish and repeatability.</p>
+        </div>
+        <div class="cap-row" data-local="images/vmc-machining.jpg" data-remote="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/ee60bee7-d6c6-5f52-980f-76f7a711f448/d04df9be-0464-5cc4-9d83-b896cacf70fa.jpg" data-label="VMC / CNC Machining" data-reveal>
+          <span class="num">/ 03</span><h3>VMC / CNC Machining</h3><span class="arr"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+          <p>Vertical machining centres for milling, drilling, tapping and boring — tight tolerances, batch consistency.</p>
+        </div>
+        <div class="cap-row" data-local="images/about.jpg" data-remote="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/36aa5cb2-c4f1-5ac2-ac61-443e4dec98dc/831722a9-0ddd-5805-88c5-4097e318d37a.jpg" data-label="Pattern &amp; Tool Making" data-reveal>
+          <span class="num">/ 04</span><h3>Pattern &amp; Tool Making</h3><span class="arr"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+          <p>Wooden, aluminium and resin patterns plus core boxes — VMC-machined from a single datum.</p>
+        </div>
+        <div class="cap-row" data-local="images/melting.jpg" data-remote="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/02637a62-3737-5022-afcf-8e9e7c419214/62ed12ac-27c5-504b-8fa4-95f41e163466.jpg" data-label="Heat Treatment" data-reveal>
+          <span class="num">/ 05</span><h3>Heat Treatment</h3><span class="arr"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+          <p>Solutionising and ageing cycles for aluminium alloys to achieve specified hardness and strength.</p>
+        </div>
+        <div class="cap-row" data-local="images/components.jpg" data-remote="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/8971782c-37a3-5b5b-a489-92df56e90c5f/9a2e58af-e219-58b1-ad4f-b526d23dfc1d.jpg" data-label="Finishing &amp; Assembly" data-reveal>
+          <span class="num">/ 06</span><h3>Finishing &amp; Assembly</h3><span class="arr"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+          <p>Fettling, shot blasting, deburring, leak testing and sub-assembly — line-ready components.</p>
+        </div>
+      </div>
+      <div class="cap-visual" data-reveal>
+        <div class="panel">
+          <img id="capImgA" class="show" src="images/moulding.jpg" onerror="this.onerror=null;this.src='https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/45f83693-3e73-5b34-958a-c91fdfa39a8b/9a2e58af-e219-58b1-ad4f-b526d23dfc1d.jpg'" alt="Capability preview">
+          <img id="capImgB" src="" alt="">
+          <div class="plabel" id="capLabel"><i>01</i>Aluminium Sand Casting</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="tag" data-reveal>How It Works</div><h2 data-reveal>From melt<br>to <span class="serif">dispatch</span></h2></div>
+      <p data-reveal>A controlled, traceable flow — every casting tracked from furnace to final inspection.</p>
+    </div>
+    <div class="proc">
+      <div class="step" data-reveal><span class="sn">01</span><div><h4>Melt</h4><p>Aluminium alloy melted and degassed under controlled temperatures.</p></div></div>
+      <div class="step" data-reveal><span class="sn">02</span><div><h4>Mould</h4><p>Sand moulds and cores prepared from single-reference patterns.</p></div></div>
+      <div class="step" data-reveal><span class="sn">03</span><div><h4>Cast</h4><p>Controlled pouring for sound, defect-free castings.</p></div></div>
+      <div class="step" data-reveal><span class="sn">04</span><div><h4>Machine</h4><p>VMC machining to drawing tolerances and finishes.</p></div></div>
+      <div class="step" data-reveal><span class="sn">05</span><div><h4>Inspect</h4><p>Dimensional, visual and leak checks on every lot.</p></div></div>
+      <div class="step" data-reveal><span class="sn">06</span><div><h4>Dispatch</h4><p>Packed, documented and shipped on schedule.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FACILITY -->
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="tag" data-reveal>Inside The Plant</div><h2 data-reveal>The <span class="serif">facility</span></h2></div>
+      <p data-reveal>Foundry floor, machining shop and inspection — all inside GIDC, Vapi.</p>
+    </div>
+    <div class="gal">
+      <div class="gitem g1" data-reveal><img loading="lazy" decoding="async" src="images/casting-shop.jpg" onerror="this.onerror=null;this.src='https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/7b691298-cfae-5856-9cf9-b36abc9f3e89/9ab95dcd-654f-5fe6-9630-ef5d436582ca.jpg'" alt="Die casting machine on the shop floor"><div class="cap"><i>01</i>Casting Shop</div></div>
+      <div class="gitem g2" data-reveal><img loading="lazy" decoding="async" src="images/vmc-machining.jpg" onerror="this.onerror=null;this.src='https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/ee60bee7-d6c6-5f52-980f-76f7a711f448/d04df9be-0464-5cc4-9d83-b896cacf70fa.jpg'" alt="CNC machining of an aluminium component"><div class="cap"><i>02</i>VMC Machining</div></div>
+      <div class="gitem g3" data-reveal><img loading="lazy" decoding="async" src="images/moulding.jpg" onerror="this.onerror=null;this.src='https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/45f83693-3e73-5b34-958a-c91fdfa39a8b/9a2e58af-e219-58b1-ad4f-b526d23dfc1d.jpg'" alt="Sand casting mould preparation"><div class="cap"><i>03</i>Moulding Line</div></div>
+      <div class="gitem g4" data-reveal><img loading="lazy" decoding="async" src="images/melting.jpg" onerror="this.onerror=null;this.src='https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/02637a62-3737-5022-afcf-8e9e7c419214/62ed12ac-27c5-504b-8fa4-95f41e163466.jpg'" alt="Molten metal pour"><div class="cap"><i>04</i>Melting &amp; Pouring</div></div>
+      <div class="gitem g5" data-reveal><img loading="lazy" decoding="async" src="images/components.jpg" onerror="this.onerror=null;this.src='https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/8971782c-37a3-5b5b-a489-92df56e90c5f/9a2e58af-e219-58b1-ad4f-b526d23dfc1d.jpg'" alt="Finished aluminium cast components"><div class="cap"><i>05</i>Finished Components</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section id="industries">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="tag" data-reveal>Who We Serve</div><h2 data-reveal>Industries</h2></div>
+      <p data-reveal>Cast and machined aluminium components trusted across sectors.</p>
+    </div>
+    <div class="ind">
+      <span class="chip" data-reveal>Automotive &amp; Auto Ancillary</span>
+      <span class="chip" data-reveal>Electrical &amp; Switchgear</span>
+      <span class="chip" data-reveal>Pumps &amp; Valves</span>
+      <span class="chip" data-reveal>Industrial Machinery</span>
+      <span class="chip" data-reveal>Textile Machinery</span>
+      <span class="chip" data-reveal>Agriculture Equipment</span>
+      <span class="chip" data-reveal>Lighting &amp; Enclosures</span>
+      <span class="chip" data-reveal>General Engineering</span>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <h2 data-reveal>Have a component<br>to <span class="serif">cast?</span></h2>
+  <p data-reveal>Send your drawing or sample — we'll return a considered quote within 24–48 hours.</p>
+  <a href="#contact" class="btn white magnetic" data-hover data-reveal>Start Your Enquiry ↗</a>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="tag" data-reveal>Get In Touch</div><h2 data-reveal>Let's cast your<br><span class="serif">next component</span></h2></div>
+      <p data-reveal>Call, WhatsApp or drop a mail — drawings, samples or even a rough idea, all welcome.</p>
+    </div>
+    <div class="contact-grid">
+      <div data-reveal>
+        <a class="c-row" href="tel:+919824909008" data-hover>
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-3 2a13 13 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg></div>
+          <div><b>Call Us</b><span>+91 98249 09008</span></div></a>
+        <a class="c-row" href="https://wa.me/919824909008?text=Hello%20Zaitun%20Engineers%2C%20I%20have%20a%20casting%20%2F%20machining%20requirement." target="_blank" rel="noopener" data-hover>
+          <div class="ic"><svg class="fillit" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.3c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.5-.2Z"/></svg></div>
+          <div><b>WhatsApp</b><span>+91 98249 09008</span></div></a>
+        <a class="c-row" href="mailto:zaitun.engineers@gmail.com" data-hover>
+          <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
+          <div><b>Email</b><span>zaitun.engineers@gmail.com</span></div></a>
+        <a class="c-row" href="https://www.youtube.com/@zaitunengineers" target="_blank" rel="noopener" data-hover>
+          <div class="ic"><svg class="fillit" viewBox="0 0 24 24"><path d="M23 12s0-3.8-.5-5.6c-.3-1-1.7-2-2C18.7 4 12 4 12 4s-6.7 0-8.5.4c-1 .3-1.7 1-2 2C1 8.2 1 12 1 12s0 3.8.5 5.6c.3 1 1 1.7 2 2 1.8.4 8.5.4 8.5.4s6.7 0 8.5-.4c1-.3 1.7-1 2-2 .5-1.8.5-5.6.5-5.6ZM9.8 15.5v-7l6 3.5-6 3.5Z"/></svg></div>
+          <div><b>YouTube</b><span>youtube.com/@zaitunengineers</span></div></a>
+        <div class="c-row">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg></div>
+          <div><b>Works</b><span>Plot No. —, GIDC Industrial Estate,<br>Vapi — 396195, Dist. Valsad, Gujarat, India</span></div></div>
+      </div>
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" data-reveal>
+        <div class="f2">
+          <div class="fld"><label>Your Name</label><input type="text" name="name" required placeholder="Ramesh Patel"></div>
+          <div class="fld"><label>Company</label><input type="text" name="company" placeholder="ABC Industries"></div>
+        </div>
+        <div class="f2">
+          <div class="fld"><label>Phone</label><input type="tel" name="phone" required placeholder="+91 ..."></div>
+          <div class="fld"><label>Email</label><input type="email" name="email" placeholder="you@company.com"></div>
+        </div>
+        <div class="fld"><label>Requirement</label>
+          <select name="service"><option>Aluminium Sand Casting</option><option>Gravity Die Casting</option><option>VMC / CNC Machining</option><option>Pattern &amp; Tool Making</option><option>Complete Cast-to-Finish Component</option><option>Other</option></select></div>
+        <div class="fld"><label>Message</label><textarea name="message" rows="4" placeholder="Describe your component, quantity, material grade..."></textarea></div>
+        <button type="submit" class="btn solid magnetic" data-hover style="justify-content:center">Send Enquiry ↗</button>
+      </form>
+    </div>
+    <div class="map" data-reveal>
+      <iframe title="Zaitun Engineers location — GIDC Vapi" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=GIDC%20Industrial%20Estate%2C%20Vapi%2C%20Gujarat%20396195&t=&z=14&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <span class="mark"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="28.5" fill="none" stroke="#22387a" stroke-width="2.6"/><g fill="#22387a" transform="translate(4.5,0) skewX(-11)"><path d="M14 19h20v4.6L24.4 40.4H34V45H14v-4.6l9.6-16.8H14z"/><path d="M34.5 24h13.5v4.4H39v3.6h7.6v4H39v5.6h9V46H34.5z"/></g></svg></span>
+        <span class="bt">ZAITUN<small>ENGINEERS</small></span>
+      </div>
+      <div class="foot-links">
+        <div><b>Explore</b><a href="#about" data-hover>About</a><a href="#capabilities" data-hover>Capabilities</a><a href="#process" data-hover>Process</a><a href="#work" data-hover>Facility</a></div>
+        <div><b>Services</b><a href="#capabilities" data-hover>Sand Casting</a><a href="#capabilities" data-hover>Gravity Die Casting</a><a href="#capabilities" data-hover>VMC Machining</a><a href="#capabilities" data-hover>Pattern Making</a></div>
+        <div><b>Contact</b><a href="tel:+919824909008" data-hover>+91 98249 09008</a><a href="mailto:zaitun.engineers@gmail.com" data-hover>zaitun.engineers@gmail.com</a><a href="https://wa.me/919824909008" target="_blank" rel="noopener" data-hover>WhatsApp</a><a href="https://www.youtube.com/@zaitunengineers" target="_blank" rel="noopener" data-hover>YouTube</a></div>
+      </div>
+    </div>
+    <div class="foot-base">
+      <small>© 2026 Zaitun Engineers · GIDC, Vapi, Gujarat · All rights reserved</small>
+      <div class="socials">
+        <a href="https://wa.me/919824909008" target="_blank" rel="noopener" aria-label="WhatsApp" data-hover><svg class="fillit" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.3c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.5-.2Z"/></svg></a>
+        <a href="https://www.youtube.com/@zaitunengineers" target="_blank" rel="noopener" aria-label="YouTube" data-hover><svg class="fillit" viewBox="0 0 24 24"><path d="M23 12s0-3.8-.5-5.6c-.3-1-1-1.7-2-2C18.7 4 12 4 12 4s-6.7 0-8.5.4c-1 .3-1.7 1-2 2C1 8.2 1 12 1 12s0 3.8.5 5.6c.3 1 1 1.7 2 2 1.8.4 8.5.4 8.5.4s6.7 0 8.5-.4c1-.3 1.7-1 2-2 .5-1.8.5-5.6.5-5.6ZM9.8 15.5v-7l6 3.5-6 3.5Z"/></svg></a>
+        <a href="mailto:zaitun.engineers@gmail.com" aria-label="Email" data-hover><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+      </div>
+      <a href="#top" class="to-top" data-hover aria-label="back to top"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<!-- floating WhatsApp -->
+<a class="wa-float" href="https://wa.me/919824909008?text=Hello%20Zaitun%20Engineers%2C%20I%20have%20a%20casting%20%2F%20machining%20requirement." target="_blank" rel="noopener" aria-label="Chat on WhatsApp" data-hover>
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.3c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.5-.2Z"/></svg>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+const finePointer = matchMedia('(hover:hover) and (pointer:fine)').matches;
+
+/* smooth scroll */
+const lenis=new Lenis({lerp:.1});
+lenis.on('scroll',ScrollTrigger.update);
+gsap.ticker.add(t=>lenis.raf(t*1000));
+gsap.ticker.lagSmoothing(0);
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+  const t=document.querySelector(a.getAttribute('href'));
+  if(t){e.preventDefault();lenis.scrollTo(t,{offset:-76});document.getElementById('mmenu').classList.remove('open');}
+}));
+
+/* hero entrance — instant, no preloader */
+window.addEventListener('DOMContentLoaded',()=>{
+  gsap.to('.hero h1 .row>span',{y:0,duration:1.05,ease:'power4.out',stagger:.12,delay:.15});
+  gsap.to('#heroFrame',{clipPath:'inset(0% 0 0 0)',duration:1.15,ease:'power4.inOut',delay:.35});
+});
+
+/* nav */
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60),{passive:true});
+document.getElementById('burger').onclick=()=>document.getElementById('mmenu').classList.add('open');
+document.getElementById('mclose').onclick=()=>document.getElementById('mmenu').classList.remove('open');
+
+/* reveals — fire once */
+document.querySelectorAll('[data-reveal]').forEach(el=>{
+  gsap.to(el,{opacity:1,y:0,duration:.9,ease:'power3.out',
+    scrollTrigger:{trigger:el,start:'top 88%',once:true}});
+});
+
+/* counters */
+document.querySelectorAll('[data-count]').forEach(el=>{
+  const end=+el.dataset.count;
+  ScrollTrigger.create({trigger:el,start:'top 92%',once:true,onEnter:()=>{
+    gsap.fromTo(el,{textContent:0},{textContent:end,duration:1.8,ease:'power2.out',snap:{textContent:1}});
+  }});
+});
+
+/* hero watermark drift */
+gsap.to('.hero-watermark',{xPercent:-6,ease:'none',
+  scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+
+/* capabilities — right panel preview (no popups) */
+const imgA=document.getElementById('capImgA'),imgB=document.getElementById('capImgB'),capLabel=document.getElementById('capLabel');
+let showingA=true;
+function swapCap(local,remote,label,num){
+  const inn=showingA?imgB:imgA, out=showingA?imgA:imgB;
+  inn.onerror=()=>{inn.onerror=null;inn.src=remote;};
+  inn.src=local;
+  inn.onload=()=>{inn.classList.add('show');out.classList.remove('show');};
+  if(inn.complete&&inn.naturalWidth){inn.classList.add('show');out.classList.remove('show');}
+  capLabel.innerHTML='<i>'+num+'</i>'+label;
+  showingA=!showingA;
+}
+document.querySelectorAll('.cap-row').forEach(r=>{
+  const go=()=>{
+    document.querySelectorAll('.cap-row').forEach(x=>x.classList.remove('active'));
+    r.classList.add('active');
+    swapCap(r.dataset.local,r.dataset.remote,r.dataset.label,r.querySelector('.num').textContent.replace('/ ','0').replace('0','0'));
+  };
+  r.addEventListener('mouseenter',go);
+  r.addEventListener('click',go);
+});
+
+/* magnetic buttons + cursor — desktop only */
+if(finePointer){
+  document.querySelectorAll('.magnetic').forEach(b=>{
+    b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();
+      gsap.to(b,{x:(e.clientX-r.left-r.width/2)*.22,y:(e.clientY-r.top-r.height/2)*.22,duration:.4});});
+    b.addEventListener('mouseleave',()=>gsap.to(b,{x:0,y:0,duration:.5,ease:'elastic.out(1,.45)'}));
+  });
+  const cur=document.querySelector('.cursor'),ring=document.querySelector('.cursor-ring');
+  let mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+  addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;
+    cur.style.transform=`translate(${mx-4}px,${my-4}px)`;},{passive:true});
+  (function loop(){rx+=(mx-rx)*.16;ry+=(my-ry)*.16;
+    ring.style.transform=`translate(${rx-17}px,${ry-17}px)`;requestAnimationFrame(loop);})();
+  document.querySelectorAll('a,button,[data-hover],.cap-row,.gitem,.chip').forEach(el=>{
+    el.addEventListener('mouseenter',()=>ring.classList.add('hovering'));
+    el.addEventListener('mouseleave',()=>ring.classList.remove('hovering'));
+  });
+}
+</script>
+</body>
+</html>
