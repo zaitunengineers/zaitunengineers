@@ -41,11 +41,11 @@ img{display:block;max-width:100%}
 /* nav */
 nav{position:fixed;top:0;left:0;right:0;z-index:900;display:flex;align-items:center;justify-content:space-between;padding:18px clamp(20px,4vw,60px);transition:background .35s,padding .35s,border-color .35s,box-shadow .35s;border-bottom:1px solid transparent}
 nav.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:10px clamp(20px,4vw,60px);border-color:var(--line);box-shadow:0 6px 30px rgba(15,29,58,.05)}
-.brand{display:flex;align-items:center;gap:14px}
-.brand img{height:46px;width:auto;mix-blend-mode:multiply}
-.brand .bt{font-family:'Sora';font-weight:800;font-size:16px;letter-spacing:.26em;line-height:1;color:var(--navy)}
-.brand .bt small{display:block;font-weight:400;font-size:8.5px;letter-spacing:.6em;color:var(--gold-d);margin-top:5px}
-.nav-links{display:flex;gap:34px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.brand{display:flex;align-items:center;gap:15px}
+.brand img{height:52px;width:auto;mix-blend-mode:multiply}
+.brand .bt{font-family:'Sora';font-weight:800;font-size:21px;letter-spacing:.24em;line-height:1;color:var(--navy)}
+.brand .bt small{display:block;font-weight:400;font-size:10px;letter-spacing:.58em;color:var(--gold-d);margin-top:6px}
+.nav-links{display:flex;gap:30px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
 .nav-links a{position:relative;padding:4px 0;transition:color .3s}
 .nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .4s cubic-bezier(.7,0,.3,1)}
 .nav-links a:hover{color:var(--navy)}
@@ -54,10 +54,10 @@ nav.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(10px);-webkit
 .nav-cta:hover{background:var(--brand);color:#fff}
 .burger{display:none;flex-direction:column;gap:6px;background:none;border:0;cursor:pointer}
 .burger span{width:26px;height:1.5px;background:var(--navy)}
-@media(max-width:920px){.nav-links,.nav-cta{display:none}.burger{display:flex}}
+@media(max-width:1020px){.nav-links,.nav-cta{display:none}.burger{display:flex}}
 
 /* hero */
-.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:120px clamp(20px,4vw,60px) 0;overflow:hidden;
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:130px clamp(20px,4vw,60px) 0;overflow:hidden;
   background:radial-gradient(900px 520px at 82% 12%,rgba(34,56,122,.06),transparent 62%),var(--white)}
 .hero-watermark{position:absolute;top:48%;left:50%;transform:translate(-50%,-50%);font-family:'Sora';font-weight:800;font-size:clamp(120px,26vw,360px);letter-spacing:.05em;color:transparent;-webkit-text-stroke:1px rgba(34,56,122,.05);z-index:0;white-space:nowrap;pointer-events:none;text-transform:uppercase}
 .hero-inner{position:relative;z-index:2;max-width:1440px;width:100%;margin:0 auto;display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(30px,5vw,70px);align-items:center}
@@ -178,8 +178,19 @@ section{padding:clamp(84px,10vw,140px) clamp(20px,4vw,60px);position:relative}
 .g3,.g4,.g5{grid-column:span 4;aspect-ratio:1/1.02}
 @media(max-width:820px){.g1,.g2,.g3,.g4,.g5{grid-column:span 12;aspect-ratio:16/10}}
 
+/* products — 4x4 grid */
+#products{background:var(--offw)}
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.pitem{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:1/1;background:linear-gradient(150deg,#e6e9f2,#d3d9e8);display:grid;place-items:center}
+.pitem .ph{position:absolute;inset:0;display:grid;place-items:center;font-family:'JetBrains Mono';font-size:12px;letter-spacing:.25em;color:#9aa5bb;text-transform:uppercase}
+.pitem img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.pitem:hover img{transform:scale(1.06)}
+.pitem::after{content:"";position:absolute;inset:0;border:1px solid var(--line);border-radius:14px;pointer-events:none;transition:border-color .3s}
+.pitem:hover::after{border-color:var(--gold)}
+@media(max-width:820px){.pgrid{grid-template-columns:repeat(2,1fr);gap:12px}}
+
 /* industries */
-#industries{background:var(--offw)}
+#industries{background:var(--white)}
 .ind{display:flex;flex-wrap:wrap;gap:14px}
 .chip{border:1px solid var(--line);border-radius:100px;padding:15px 30px;font-family:'Sora';font-size:13.5px;font-weight:500;letter-spacing:.06em;color:var(--mut);transition:.3s;background:#fff}
 .chip:hover{background:var(--brand);border-color:var(--brand);color:#fff;transform:translateY(-3px)}
@@ -267,7 +278,7 @@ footer{background:var(--ink);color:#fff;padding:64px clamp(20px,4vw,60px) 32px}
 /* mobile menu */
 .mmenu{position:fixed;inset:0;background:rgba(255,255,255,.98);z-index:950;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;opacity:0;pointer-events:none;transition:opacity .3s}
 .mmenu.open{opacity:1;pointer-events:auto}
-.mmenu a{font-family:'Sora';font-size:clamp(28px,7vw,44px);font-weight:700;text-transform:uppercase;padding:8px;color:var(--navy)}
+.mmenu a{font-family:'Sora';font-size:clamp(26px,6.4vw,40px);font-weight:700;text-transform:uppercase;padding:7px;color:var(--navy)}
 .mmenu a:hover{color:var(--gold-d)}
 .mmenu .close{position:absolute;top:26px;right:26px;background:none;border:1px solid var(--line);color:var(--navy);width:48px;height:48px;border-radius:50%;font-size:16px;cursor:pointer}
 
@@ -290,6 +301,7 @@ footer{background:var(--ink);color:#fff;padding:64px clamp(20px,4vw,60px) 32px}
     <a href="#capabilities">Capabilities</a>
     <a href="#process">Process</a>
     <a href="#work">Facility</a>
+    <a href="#products">Products</a>
     <a href="#contact">Contact</a>
   </div>
   <a href="#contact" class="nav-cta">Get a Quote</a>
@@ -299,7 +311,7 @@ footer{background:var(--ink);color:#fff;padding:64px clamp(20px,4vw,60px) 32px}
 <div class="mmenu" id="mmenu">
   <button class="close" id="mclose">✕</button>
   <a href="#about">About</a><a href="#capabilities">Capabilities</a><a href="#process">Process</a>
-  <a href="#work">Facility</a><a href="#contact">Contact</a>
+  <a href="#work">Facility</a><a href="#products">Products</a><a href="#contact">Contact</a>
 </div>
 
 <!-- HERO -->
@@ -438,6 +450,34 @@ footer{background:var(--ink);color:#fff;padding:64px clamp(20px,4vw,60px) 32px}
   </div>
 </section>
 
+<!-- PRODUCTS — drop 16 photos into images/ as product-1.jpg ... product-16.jpg -->
+<section id="products">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="tag" data-reveal>What We Make</div><h2 data-reveal>Product <span class="serif">gallery</span></h2></div>
+      <p data-reveal>Real components from our floor — cast, machined and inspected in-house.</p>
+    </div>
+    <div class="pgrid">
+      <div class="pitem" data-reveal><span class="ph">01</span><img loading="lazy" decoding="async" src="images/product-1.jpg" alt="Product 1" onerror="this.remove()"></div>
+      <div class="pitem" data-reveal><span class="ph">02</span><img loading="lazy" decoding="async" src="images/product-2.jpg" alt="Product 2" onerror="this.remove()"></div>
+      <div class="pitem" data-reveal><span class="ph">03</span><img loading="lazy" decoding="async" src="images/product-3.jpg" alt="Product 3" onerror="this.remove()"></div>
+      <div class="pitem" data-reveal><span class="ph">04</span><img loading="lazy" decoding="async" src="images/product-4.jpg" alt="Product 4" onerror="this.remove()"></div>
+      <div class="pitem" data-reveal><span class="ph">05</span><img loading="lazy" decoding="async" src="images/product-5.jpg" alt="Product 5" onerror="this.remove()"></div>
+      <div class="pitem" data-reveal><span class="ph">06</span><img loading="lazy" decoding="async" src="images/product-6.jpg" alt="Product 6" onerror="this.remove()"></div>
+      <div class="pitem" data-reveal><span class="ph">07</span><img loading="lazy" decoding="async" src="images/product-7.jpg" alt="Product 7" onerror="this.remove()"></div>
+      <div class="pitem" data-reveal><span class="ph">08</span><img loading="lazy" decoding="async" src="images/product-8.jpg" alt="Product 8" onerror="this.remove()"></div>
+      <div class="pitem" data-reveal><span class="ph">09</span><img loading="lazy" decoding="async" src="images/product-9.jpg" alt="Product 9" onerror="this.remove()"></div>
+      <div class="pitem" data-reveal><span class="ph">10</span><img loading="lazy" decoding="async" src="images/product-10.jpg" alt="Product 10" onerror="this.remove()"></div>
+      <div class="pitem" data-reveal><span class="ph">11</span><img loading="lazy" decoding="async" src="images/product-11.jpg" alt="Product 11" onerror="this.remove()"></div>
+      <div class="pitem" data-reveal><span class="ph">12</span><img loading="lazy" decoding="async" src="images/product-12.jpg" alt="Product 12" onerror="this.remove()"></div>
+      <div class="pitem" data-reveal><span class="ph">13</span><img loading="lazy" decoding="async" src="images/product-13.jpg" alt="Product 13" onerror="this.remove()"></div>
+      <div class="pitem" data-reveal><span class="ph">14</span><img loading="lazy" decoding="async" src="images/product-14.jpg" alt="Product 14" onerror="this.remove()"></div>
+      <div class="pitem" data-reveal><span class="ph">15</span><img loading="lazy" decoding="async" src="images/product-15.jpg" alt="Product 15" onerror="this.remove()"></div>
+      <div class="pitem" data-reveal><span class="ph">16</span><img loading="lazy" decoding="async" src="images/product-16.jpg" alt="Product 16" onerror="this.remove()"></div>
+    </div>
+  </div>
+</section>
+
 <!-- INDUSTRIES -->
 <section id="industries">
   <div class="wrap">
@@ -550,7 +590,7 @@ footer{background:var(--ink);color:#fff;padding:64px clamp(20px,4vw,60px) 32px}
         <span class="bt">ZAITUN<small>ENGINEERS</small></span>
       </div>
       <div class="foot-links">
-        <div><b>Explore</b><a href="#about">About</a><a href="#capabilities">Capabilities</a><a href="#process">Process</a><a href="#work">Facility</a></div>
+        <div><b>Explore</b><a href="#about">About</a><a href="#capabilities">Capabilities</a><a href="#process">Process</a><a href="#work">Facility</a><a href="#products">Products</a></div>
         <div><b>Services</b><a href="#capabilities">Sand Casting</a><a href="#capabilities">Gravity Die Casting</a><a href="#capabilities">VMC Machining</a><a href="#capabilities">Pattern Making</a></div>
         <div><b>Contact</b><a href="tel:+919824909008">+91 98249 09008</a><a href="mailto:zaitun.engineers@gmail.com">zaitun.engineers@gmail.com</a><a href="https://wa.me/919824909008" target="_blank" rel="noopener">WhatsApp</a><a href="https://www.youtube.com/@zaitunengineers" target="_blank" rel="noopener">YouTube</a></div>
       </div>
