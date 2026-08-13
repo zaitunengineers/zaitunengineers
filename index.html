@@ -201,6 +201,7 @@ a.c-row:hover span{color:var(--brand)}
 .c-row .ic svg.fillit{fill:var(--brand);stroke:none}
 .c-row b{display:block;font-family:'Sora';font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--mut);margin-bottom:5px;font-weight:500}
 .c-row span{font-size:15px;color:var(--navy);transition:color .3s;word-break:break-word}
+.c-row .dir{display:inline-block;margin-top:6px;font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-d)}
 @media(max-width:920px){.contact-grid{grid-template-columns:1fr}}
 
 /* minimalist step form */
@@ -236,6 +237,8 @@ a.c-row:hover span{color:var(--brand)}
 .qok p{color:var(--mut);font-size:14px}
 .map{margin-top:60px;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 60px rgba(15,29,58,.08);height:360px;background:var(--offw)}
 .map iframe{width:100%;height:100%;border:0}
+.map-link{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-family:'JetBrains Mono';font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--brand);border-bottom:1px solid var(--gold);padding-bottom:4px;transition:color .3s}
+.map-link:hover{color:var(--gold-d)}
 
 /* footer */
 footer{background:var(--ink);color:#fff;padding:64px clamp(20px,4vw,60px) 32px}
@@ -483,9 +486,9 @@ footer{background:var(--ink);color:#fff;padding:64px clamp(20px,4vw,60px) 32px}
         <a class="c-row" href="https://www.youtube.com/@zaitunengineers" target="_blank" rel="noopener">
           <div class="ic"><svg class="fillit" viewBox="0 0 24 24"><path d="M23 12s0-3.8-.5-5.6c-.3-1-1-1.7-2-2C18.7 4 12 4 12 4s-6.7 0-8.5.4c-1 .3-1.7 1-2 2C1 8.2 1 12 1 12s0 3.8.5 5.6c.3 1 1 1.7 2 2 1.8.4 8.5.4 8.5.4s6.7 0 8.5-.4c1-.3 1.7-1 2-2 .5-1.8.5-5.6.5-5.6ZM9.8 15.5v-7l6 3.5-6 3.5Z"/></svg></div>
           <div><b>YouTube</b><span>youtube.com/@zaitunengineers</span></div></a>
-        <div class="c-row">
+        <a class="c-row" href="https://www.google.com/maps/dir/?api=1&destination=Zaitun+Engineers,+GIDC+Industrial+Estate,+Vapi,+Gujarat+396195" target="_blank" rel="noopener">
           <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg></div>
-          <div><b>Works</b><span>Plot No. —, GIDC Industrial Estate,<br>Vapi — 396195, Dist. Valsad, Gujarat, India</span></div></div>
+          <div><b>Works</b><span>Plot No. —, GIDC Industrial Estate,<br>Vapi — 396195, Dist. Valsad, Gujarat, India</span><span class="dir">Get Directions ↗</span></div></a>
       </div>
 
       <!-- Minimalist 3-question form -->
@@ -532,8 +535,9 @@ footer{background:var(--ink);color:#fff;padding:64px clamp(20px,4vw,60px) 32px}
     </div>
     <div class="map" data-reveal>
       <iframe title="Zaitun Engineers location — GIDC Vapi" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-        src="https://maps.google.com/maps?q=GIDC%20Industrial%20Estate%2C%20Vapi%2C%20Gujarat%20396195&t=&z=14&ie=UTF8&iwloc=&output=embed"></iframe>
+        src="https://maps.google.com/maps?q=Zaitun%20Engineers%2C%20GIDC%20Industrial%20Estate%2C%20Vapi%2C%20Gujarat&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
     </div>
+    <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=Zaitun+Engineers,+GIDC+Industrial+Estate,+Vapi,+Gujarat+396195" target="_blank" rel="noopener" data-reveal>Open directions in Google Maps ↗</a>
   </div>
 </section>
 
