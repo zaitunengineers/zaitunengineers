@@ -1,26 +1,26 @@
-ZAITUN ENGINEERS — WEBSITE PACKAGE
-==================================
+ZAITUN ENGINEERS — WEBSITE
+==========================
 
-CONTENTS
-- index.html          The complete website (open in any browser)
-- images/             Put the site photos here (see below)
-- download-images.bat Windows: double-click to auto-download all photos
-- download-images.sh  Mac/Linux: run `bash download-images.sh`
+FILES IN THIS REPO
+- index.html      The complete website (single file, no build step)
+- logo.jpg         Site logo, used in nav + footer + favicon
+- arc-1.PNG … arc-6.PNG   Product photos used in the hero carousel
 
-IMAGES
-The site works immediately because every image falls back to an online
-link if the local file is missing. For the final, fast, offline version:
-  1. Run the downloader script above (it fills images/ automatically), OR
-  2. Save your own real factory photos into images/ using these names:
-     hero.jpg, about.jpg, casting-shop.jpg, vmc-machining.jpg,
-     moulding.jpg, melting.jpg, components.jpg
-     (Real photos of the client's plant are strongly recommended.)
-
-BEFORE GOING LIVE
-- Replace "Plot No. —" in the Contact section with the real address
-- Replace YOUR_FORM_ID in the <form> tag with your Formspree form ID
-- Update the stats numbers (25+, 120+, 500K+, 98%) with real figures
+STATUS / TO DO BEFORE FULL LAUNCH
+- The About section references product-1.jpg through product-9.jpg for
+  the photo grid. These are NOT in the repo yet — real shop-floor and
+  product photos are still pending from the client. Until they're added,
+  that grid will show broken images. Add the 9 files with those exact
+  names, or edit the <div class="pgrid"> block in index.html to use
+  fewer/existing images.
+- Contact info (phone, WhatsApp, email, address, map pin) is live and
+  verified against the real Google Business listing for Zaitun Engineers.
+- Formspree endpoint (xaewdwao) is wired to the enquiry form — test a
+  real submission end-to-end to confirm it reaches the client's inbox.
+- Stats: "30+ years" reflects casting operations since ~1990 (factory
+  itself established 1983). Confirm exact figures with the client.
 
 DEPLOY
-Drag this whole folder into Netlify Drop (app.netlify.com/drop) or
-import it in Vercel — no build step needed.
+This is a static site — drag the whole folder into Netlify Drop
+(app.netlify.com/drop), import into Vercel, or serve via GitHub Pages.
+No build step needed.
