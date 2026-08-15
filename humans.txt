@@ -1,0 +1,9 @@
+/* TEAM */
+Business: Zaitun Engineers
+Location: GIDC, Vapi, Gujarat, India
+Site: https://www.zaitunengineers.com/
+
+/* SITE */
+Last update: 2026/08/15
+Standards: HTML5, CSS3
+Components: Formspree (contact form)
