@@ -2,59 +2,92 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://www.zaitunengineers.com/</loc>
+    <loc>https://zaitunengineers.com/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://www.zaitunengineers.com/arc-1.png</image:loc>
+      <image:loc>https://zaitunengineers.com/aluminium-ring.png</image:loc>
       <image:title>Aluminium Ring — Zaitun Engineers</image:title>
       <image:caption>Precision machined aluminium ring, cast and finished at Zaitun Engineers, GIDC Vapi</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.zaitunengineers.com/arc-2.png</image:loc>
+      <image:loc>https://zaitunengineers.com/stepped-housing.png</image:loc>
       <image:title>Stepped Aluminium Housing — Zaitun Engineers</image:title>
       <image:caption>Turned multi-diameter aluminium component, Zaitun Engineers, GIDC Vapi</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.zaitunengineers.com/logo.jpg</image:loc>
+      <image:loc>https://zaitunengineers.com/logo.jpg</image:loc>
       <image:title>Zaitun Engineers Logo</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://www.zaitunengineers.com/products.html</loc>
+    <loc>https://zaitunengineers.com/products.html</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://www.zaitunengineers.com/arc-1.png</image:loc>
+      <image:loc>https://zaitunengineers.com/aluminium-ring.png</image:loc>
       <image:title>Aluminium Ring — Zaitun Engineers</image:title>
       <image:caption>Turned and machined aluminium ring manufactured by Zaitun Engineers, GIDC Vapi</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.zaitunengineers.com/arc-2.png</image:loc>
+      <image:loc>https://zaitunengineers.com/stepped-housing.png</image:loc>
       <image:title>Stepped Housing — Zaitun Engineers</image:title>
       <image:caption>Multi-diameter turned aluminium component, Zaitun Engineers</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.zaitunengineers.com/arc-3.png</image:loc>
+      <image:loc>https://zaitunengineers.com/machined-ring.png</image:loc>
       <image:title>Machined Ring — Zaitun Engineers</image:title>
       <image:caption>Fine-turned aluminium ring finished at Zaitun Engineers, GIDC Vapi</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.zaitunengineers.com/arc-4.png</image:loc>
+      <image:loc>https://zaitunengineers.com/flanged-bushing.png</image:loc>
       <image:title>Flanged Bushing — Zaitun Engineers</image:title>
       <image:caption>Precision-bore flanged aluminium bushing, Zaitun Engineers</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.zaitunengineers.com/arc-5.png</image:loc>
+      <image:loc>https://zaitunengineers.com/mounting-flange.png</image:loc>
       <image:title>Mounting Flange — Zaitun Engineers</image:title>
       <image:caption>Drilled aluminium mounting flange manufactured by Zaitun Engineers, GIDC Vapi</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.zaitunengineers.com/arc-6.png</image:loc>
+      <image:loc>https://zaitunengineers.com/flange-ring.png</image:loc>
       <image:title>Flange Ring — Zaitun Engineers</image:title>
       <image:caption>12-hole bolt circle aluminium flange ring, Zaitun Engineers</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://zaitunengineers.com/machined-mounting-plate.png</image:loc>
+      <image:title>Machined Mounting Plate — Zaitun Engineers</image:title>
+      <image:caption>Stepped-bore machined aluminium mounting plate, Zaitun Engineers, GIDC Vapi</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://zaitunengineers.com/machined-manifold-block.png</image:loc>
+      <image:title>Machined Manifold Block — Zaitun Engineers</image:title>
+      <image:caption>Machined aluminium block with pocketed sealing face, Zaitun Engineers, GIDC Vapi</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://zaitunengineers.com/cast-linkage-arm.png</image:loc>
+      <image:title>Cast Linkage Arm — Zaitun Engineers</image:title>
+      <image:caption>Cast aluminium linkage arm with machined bore eyes, Zaitun Engineers, GIDC Vapi</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://zaitunengineers.com/privacy.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://zaitunengineers.com/terms.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://zaitunengineers.com/cookies.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
   </url>
 </urlset>

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.zaitunengineers.com/sitemap.xml
+Sitemap: https://zaitunengineers.com/sitemap.xml
