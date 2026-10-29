@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#12285A">
+  <title>Set up · Zaitun Engineers Billing</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/img/logo-sample.svg">
+  <link rel="stylesheet" href="/assets/css/app.css">
+  <script src="/assets/js/theme.js"></script>
+</head>
+<body>
+  <main class="auth">
+    <section class="auth-brand" aria-hidden="true">
+      <div>
+        <img class="logo-mark" src="/assets/img/logo-sample.svg" alt="">
+        <h2>Zaitun<br>Engineers</h2>
+        <div class="tag">Billing</div>
+      </div>
+      <div class="small">Private system. Authorised use only.</div>
+    </section>
+
+    <section class="auth-panel">
+      <div class="auth-card">
+        <div class="auth-mobile-brand">
+          <img class="logo-mark" src="/assets/img/logo-sample.svg" alt="">
+          <div class="name">Zaitun Engineers</div>
+        </div>
+        <div class="card stack" id="setup-card">
+          <div>
+            <h1>Create owner account</h1>
+            <p class="sub">If an account already exists, this page resets its username and password.</p>
+          </div>
+          <div id="error" class="alert alert-danger" role="alert" hidden></div>
+          <form id="setup-form" class="form-stack" method="post" action="/api/setup" novalidate>
+            <div class="field">
+              <label for="setupKey">Setup key</label>
+              <div class="pw">
+                <input class="input" id="setupKey" name="setupKey" type="password" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" required>
+                <button type="button" class="eye" id="eye-key" aria-label="Show setup key"></button>
+              </div>
+            </div>
+            <div class="field">
+              <label for="username">Username</label>
+              <input class="input" id="username" name="username" type="text" autocomplete="username" autocapitalize="none" autocorrect="off" spellcheck="false" maxlength="32" required>
+              <div class="hint">3 to 32 characters: letters, numbers, dot, dash, underscore.</div>
+            </div>
+            <div class="field">
+              <label for="password">Password</label>
+              <div class="pw">
+                <input class="input" id="password" name="password" type="password" autocomplete="new-password" autocapitalize="none" autocorrect="off" spellcheck="false" required>
+                <button type="button" class="eye" id="eye-pw" aria-label="Show password"></button>
+              </div>
+              <div id="meter"></div>
+            </div>
+            <div class="field">
+              <label for="confirm">Confirm password</label>
+              <input class="input" id="confirm" name="confirm" type="password" autocomplete="new-password" autocapitalize="none" autocorrect="off" spellcheck="false" required>
+            </div>
+            <button class="btn btn-primary btn-block" id="submit" type="submit">Create account</button>
+          </form>
+        </div>
+        <div class="card stack" id="done-card" hidden>
+          <div>
+            <h1>Account ready</h1>
+            <p class="sub" id="done-text"></p>
+          </div>
+          <a class="btn btn-primary btn-block" href="/">Go to sign in</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="/assets/js/setup.js"></script>
+</body>
+</html>

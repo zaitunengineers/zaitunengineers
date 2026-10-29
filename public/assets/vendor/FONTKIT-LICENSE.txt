@@ -1,0 +1,2 @@
+fontkit 1.1.1 (@pdf-lib/fontkit) is MIT licensed. Copyright (c) the fontkit and pdf-lib authors.
+Permission is granted to use, copy, modify and distribute it under the terms of the MIT License.
